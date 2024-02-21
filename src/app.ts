@@ -13,9 +13,6 @@ async function main() {
     mongoUrl: envs.MONGO_URL
   })
 
-  console.log('dbname:', envs.MONGO_DB_NAME)
-  console.log('mongourl:', envs.MONGO_URL)
-
   const server = new Server({ port: envs.PORT, routes: AppRoutes.routes })
   server.start()
 }
